@@ -1,32 +1,30 @@
 name: cicd
-on: 
+
+on:
   workflow_dispatch:
+
 jobs:
 
- code:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Clone the code
-      run: echo "cloning the code"
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        run: echo "cloning the code"
 
- build:
-   runs-on: ubuntu-latest
-   steps:
-    - name: build the code
-      run: echo "build the code":
-      
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build the code
+        run: echo "build the code"
 
- test:
-   runs-on: ubuntu-latest
-   steps:
-    - name: running test cases
-      run: echo "testing is running"
-      
- 
- deploy:
-   runs-on: latest-ubunut
-   steps:
-    - name: Deploying on the machine
-      run: echo "Deploying the code"
-    
- 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running test cases
+        run: echo "testing is running"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying on the machine
+        run: echo "Deploying the code"
